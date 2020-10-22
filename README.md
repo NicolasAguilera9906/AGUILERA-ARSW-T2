@@ -11,6 +11,28 @@ View [Documentation](https://nicolasaguilera9906.github.io/AGUILERA-ARSW-T2/apid
 
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://open-weath3r-app.herokuapp.com/)
 
+## Instrucciones de uso
+
+1. Encontrará el boton Search que le permitirá buscar el clima de una determinada ciudad. Por ejemplo : London,Uk
+
+![](images/instruccion1.png)
+
+2. Una vez oprimido el botón encontrará información con respecto al clima de esa ciudad. Encontrará información con respecto a temperatura actual , visibilidad , humedad , velocidad del viento , sensación termina , punto más bajo de temperatura y velocidad del viento.
+
+![](images/instruccion2.png)
+
+3. Por último , en la parte inferior de la página , podrá observar un mapa marcando la ubicación del lugar consultado.
+
+![](images/instruccion3.png)
+
+## Diagrama de componentes
+
+![](images/ccdiagram.png)
+
+## Diagrama de despliegue
+
+![](images/despliegue.png)
+
 ## Preparación para el Parcial
 
 
