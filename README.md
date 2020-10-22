@@ -4,6 +4,11 @@
 
 **Estudiante** : Nicolás Aguilera Contreras
 
+## Compile and run instructions.
+ 
+- Para compilar: maven package
+- Para ejecutar la clase principal: mvn exec:java -Dexec.mainClass="edu.eci.arsw.weather.WeatherApplication"
+
 ## Documentación
 View [Documentation](https://nicolasaguilera9906.github.io/AGUILERA-ARSW-T2/apidocs/index.html)
 
