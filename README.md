@@ -53,7 +53,7 @@ De esta manera , por ejemplo , si se requiere consumir otra api solo es necesari
 
 El controlador utiliza los servicios intyectando la interfaz OpenWeatherServices
 
-![](images/servicios.png)
+![](images/servicios.PNG)
 
 De esta manera , si se requiere cambiar la manera en la que se realizan los servicios solo es necesario realizar otra implementación de una clase que implemente a OpenWeatherServoces
 
