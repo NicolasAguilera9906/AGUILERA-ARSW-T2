@@ -1,6 +1,5 @@
 package edu.eci.arsw.weather.APIConsumers;
 
-import edu.eci.arsw.weather.Model.Weather;
 import edu.eci.arsw.weather.Services.ApiConsumerException;
 import org.springframework.stereotype.Service;
 

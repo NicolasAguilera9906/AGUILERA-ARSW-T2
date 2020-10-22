@@ -1,5 +1,6 @@
 package edu.eci.arsw.weather.Controllers;
 
+import edu.eci.arsw.weather.Cache.OpenWeatherCacheImpl;
 import edu.eci.arsw.weather.Services.OpenWeatherAppException;
 import edu.eci.arsw.weather.Services.OpenWeatherAppServices;
 import edu.eci.arsw.weather.Services.OpenWeatherAppServicesImpl;
@@ -21,6 +22,9 @@ public class WeatherAppController {
     @Autowired
     OpenWeatherAppServicesImpl opas = null;
 
+    @Autowired
+    OpenWeatherCacheImpl openWeatherCache;
+
     /**
      * Obtiene el clima de una cierta ciudad en el mundo
      *
@@ -28,7 +32,7 @@ public class WeatherAppController {
      * @return Una entidad de respuesta
      */
     @GetMapping(value = "")
-    public ResponseEntity<?> getFilteredClassesByName(@RequestParam(value = "city") String city){
+    public ResponseEntity<?> getWeatherByCity(@RequestParam(value = "city") String city){
         System.out.println(city);
         try {
             return new ResponseEntity<>(opas.getWeatherByCity(city), HttpStatus.ACCEPTED);
@@ -36,5 +40,10 @@ public class WeatherAppController {
             Logger.getLogger(WeatherAppController.class.getName()).log(Level.SEVERE, null, e);
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
+    }
+
+    @GetMapping("/size")
+    public Long getSize(){
+        return openWeatherCache.size();
     }
 }
