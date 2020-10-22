@@ -17,7 +17,7 @@ View [Documentation](https://nicolasaguilera9906.github.io/AGUILERA-ARSW-T2/apid
 
 ![](images/instruccion1.png)
 
-2. Una vez oprimido el botón encontrará información con respecto al clima de esa ciudad. Encontrará información con respecto a temperatura actual , visibilidad , humedad , velocidad del viento , sensación termina , punto más bajo de temperatura y velocidad del viento.
+2. Una vez oprimido el botón encontrará información con respecto al clima de esa ciudad. Encontrará información con respecto a temperatura actual , visibilidad , humedad , velocidad del viento , sensación termina y punto más bajo de temperatura.
 
 ![](images/instruccion2.png)
 
