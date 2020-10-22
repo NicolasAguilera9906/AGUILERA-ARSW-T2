@@ -19,7 +19,7 @@ public class ApiConsumerImpl {
 
     public ApiConsumerImpl() {
         url = "http://api.openweathermap.org/data/2.5";
-        key = "9e324e1015bb65837955b4d0ceadbd8e";
+        key = "9fc1aaf1f37f3f1a4f1bf3ddab4187cb";
     }
 
     /**
