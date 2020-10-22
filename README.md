@@ -4,17 +4,29 @@
 
 **Estudiante** : Nicolás Aguilera Contreras
 
-## Compile and run instructions.
- 
-- Para compilar: maven package
-- Para ejecutar la clase principal: mvn exec:java -Dexec.mainClass="edu.eci.arsw.weather.WeatherApplication"
-
 ## Documentación
 View [Documentation](https://nicolasaguilera9906.github.io/AGUILERA-ARSW-T2/apidocs/index.html)
 
 ## Deployed to Heroku
 
 [![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://open-weath3r-app.herokuapp.com/)
+
+## Compile and run instructions.
+ 
+- Para compilar: maven package
+- Para ejecutar la clase principal: mvn exec:java -Dexec.mainClass="edu.eci.arsw.weather.WeatherApplication"
+
+## Instrucciones de compilación local
+
+Cambiar la variable url por http://localhost:8080 en los modulos de javascript : apiclient.js y search.js
+
+![](images/local1.PNG)
+
+![](images/local2.PNG)
+
+Posteriormente correr la clase WeatherApplication y abrir http://localhost:8080 en el navegador
+
+![](images/local3.PNG)
 
 ## Instrucciones de uso
 
