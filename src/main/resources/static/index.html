@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <title>Open-Weather-App</title>
+    <script
+            src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/apiclient.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<header>
+    <section>
+        <h1>
+            Open-Weather-App
+        </h1>
+    </section>
+</header>
+<div class="container">
+    <br/>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <form class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                        <i class="fas fa-search h4 text-body"></i>
+                    </div>
+                    <div class="col">
+                        <input id="city_input" class="form-control form-control-lg form-control-borderless" placeholder="Search weather of a city (Ex : London,uk)">
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-primary" onclick="searchModule.searchWeather(city_input.value)">Search Weather</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<p></p>
+<p></p>
+<div class="padding-1">
+    <div class="row">
+        <div class="col" >
+            <h5 id="city" style="color:darkslategray;"></h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" >
+            <h3 id="temperature" style="color:darkslategray;"></h3>
+        </div>
+    </div>
+<div class="row">
+    <div class="col" >
+        <h3 id="description" style="color:darkslategray;"></h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 padding-0"> >
+        <h0 id="windspeed" style="color:darkslategray;"></h0>
+    </div>
+    <div class="col-md-2 padding-0"> >
+        <h0 id="pressure" style="color:darkslategray;"></h0>
+    </div>
+    <div class="col-md-2 padding-0"> >
+        <h0 id="humidity" style="color:darkslategray;"></h0>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2 padding-0"> >
+        <h0 id="dew_point" style="color:darkslategray;"></h0>
+    </div>
+    <div class="col-md-2 padding-0"> >
+        <h0 id="visibility" style="color:darkslategray;"></h0>
+    </div>
+</div>
+</div>
+</body>
+</html>

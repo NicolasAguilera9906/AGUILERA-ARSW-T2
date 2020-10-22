@@ -31,17 +31,13 @@ public class WeatherAppController {
      * @return Una entidad de respuesta
      */
     @GetMapping(value = "")
-    public ResponseEntity<?> getWeatherByCity(@RequestParam(value = "q") String city){
+    public ResponseEntity<?> getWeatherByCity(@RequestParam(value = "city") String city){
+        System.out.println(city);
         try {
             return new ResponseEntity<>(opas.getWeatherByCity(city), HttpStatus.ACCEPTED);
         } catch (OpenWeatherAppException e) {
             Logger.getLogger(WeatherAppController.class.getName()).log(Level.SEVERE, null, e);
             return new ResponseEntity<>(e.getMessage(), HttpStatus.NOT_FOUND);
         }
-    }
-
-    @GetMapping("/size")
-    public Long getSize(){
-        return openWeatherCache.size();
     }
 }
