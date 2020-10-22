@@ -38,6 +38,33 @@ View [Documentation](https://nicolasaguilera9906.github.io/AGUILERA-ARSW-T2/apid
 
 ![](images/despliegue.png)
 
+## Cambio de implementación de funciones
+
+## Api Consumer
+
+La clase de servicios obtiene el clima por medio de la inyección de la interfaz ApiConsumer.
+
+![](images/consumer.png)
+
+De esta manera , por ejemplo , si se requiere consumir otra api solo es necesario realizar otra implementación de una clase que implemente a ApiConsumer
+
+
+## OpenWeatherServices
+
+El controlador utiliza los servicios intyectando la interfaz OpenWeatherServices
+
+![](images/servicios.png)
+
+De esta manera , si se requiere cambiar la manera en la que se realizan los servicios solo es necesario realizar otra implementación de una clase que implemente a OpenWeatherServoces
+
+## Caché
+La clase de servicios realiza el cache por medio de la inyección de la interfaz OpenWeatherCache
+
+![](images/cache.png)
+
+De esta manera , si se requiere cambiar la manera en la que se realiza el caché soloo es necesario realizar otra implementación de una clase que implemente a OpenWeatherCaché
+
+
 ## Preparación para el Parcial
 
 
