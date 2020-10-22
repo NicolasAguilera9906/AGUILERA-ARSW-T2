@@ -11,7 +11,14 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
     <script type="text/javascript" src="js/apiclient.js"></script>
+    <script type="text/javascript" src="js/gmap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 -->
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
     <link rel="stylesheet" href="style.css">
+
 
 </head>
 <body>
@@ -47,6 +54,11 @@
 <div class="padding-1">
     <div class="row">
         <div class="col" >
+            <h0 id="date" style="color:orange;"></h0>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" >
             <h5 id="city" style="color:darkslategray;"></h5>
         </div>
     </div>
@@ -80,5 +92,13 @@
     </div>
 </div>
 </div>
+<div id="map">
+    <script>
+    function initMap(){
+        gmap.initMap(null);
+    }
+    </script>
+</div>
 </body>
+<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&signed_in=false&language=en"></script>
 </html>

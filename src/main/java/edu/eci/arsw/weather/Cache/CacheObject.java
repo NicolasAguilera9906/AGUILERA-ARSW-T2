@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * Clase que representa a un objeto de Cache con tiempo de expiración.
+ * Taken from : https://programmer.help/blogs/java-implements-simple-memory-caching-using-concurrent-hashmap.html
  **/
 public class CacheObject implements Delayed {
 

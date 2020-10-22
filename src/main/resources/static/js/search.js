@@ -1,12 +1,28 @@
 var searchModule = (function () {
 
-    function searchWeather(city) {
-        apiclient.getWeatherOfACity(city).then(function (data, text) {
-            clear();
-            weather = parse(data);
-            write(weather);
+    var url = "https://open-weath3r-app.herokuapp.com"
 
-        });
+    function searchWeather(city) {
+        if(city=="" || city==null){
+            Swal.fire({
+                position: "center",
+                icon: "error",
+                title: "Oops...",
+                text: "The city can't be null",
+                showConfirmButton: false,
+                timer: 2500
+            }).then(function(){
+                window.location.href=url;
+            });
+        }
+        else {
+            apiclient.getWeatherOfACity(city).then(function (data, text) {
+                clear();
+                weather = parse(data);
+                write(weather);
+                gmap.initMap(weather);
+            });
+        }
     }
     function clear(data){
         $("#city").html("");
@@ -17,9 +33,12 @@ var searchModule = (function () {
         $("#humidity").html("");
         $("#dew_point").html("");
         $("#visibility").html("");
+        $("#date").html("");
     }
     function write(data){
-        console.log(data);
+        var timezoneInMinutes = data.timezone / 60;
+        var currTime = moment().utcOffset(timezoneInMinutes).format("dddd, MMMM Do YYYY, h:mm:ss a");
+        $("#date").append(currTime);
         $("#city").append("<b>"+data.name+","+data.sys.country+"<b>");
         var temp = Math.round(data.main.temp-273.15);
         $("#temperature").append("<b>"+temp+"&deg;"+"C");
@@ -30,13 +49,8 @@ var searchModule = (function () {
         $("#humidity").append("Humidity: "+data.main.humidity+" %");
         var tempMin = Math.round(data.main.temp_min-273.15);
         $("#dew_point").append("Dew point: "+tempMin+" %");
-        var visibility = data.main.visibility/1000;
-        $("#visibility").append("Visibility "+data.visibility+" km");
-
-
-
-
-
+        var visibility = (data.visibility)/1000;
+        $("#visibility").append("Visibility "+visibility+" km");
 
     }
 
@@ -45,6 +59,6 @@ var searchModule = (function () {
     }
 
     return {
-        searchWeather:searchWeather
+        searchWeather:searchWeather,
     };
 })();
