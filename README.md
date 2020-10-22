@@ -2,6 +2,7 @@
 
 ## Preparación para el Parcial
 
+
 Con el objetivo de preparar el examen final del segundo tercio, por favor siga las siguientes instrucciones.
 
 1. Explore el API de OpenWeather en el siguiente [enlace](https://openweathermap.org/ ).
