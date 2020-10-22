@@ -1,0 +1,6 @@
+edu.eci.arsw.weather
+edu.eci.arsw.weather.APIConsumers
+edu.eci.arsw.weather.Cache
+edu.eci.arsw.weather.Controllers
+edu.eci.arsw.weather.Model
+edu.eci.arsw.weather.Services
