@@ -27,13 +27,11 @@ public class WeatherAppController {
 
     /**
      * Obtiene el clima de una cierta ciudad en el mundo
-     *
      * @param city El nombre de la ciudad a buscar
      * @return Una entidad de respuesta
      */
     @GetMapping(value = "")
-    public ResponseEntity<?> getWeatherByCity(@RequestParam(value = "city") String city){
-        System.out.println(city);
+    public ResponseEntity<?> getWeatherByCity(@RequestParam(value = "q") String city){
         try {
             return new ResponseEntity<>(opas.getWeatherByCity(city), HttpStatus.ACCEPTED);
         } catch (OpenWeatherAppException e) {
